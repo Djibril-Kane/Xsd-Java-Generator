@@ -5,7 +5,6 @@ import java.util.*;
 
 public class XsdToJavaGenerator {
 
-    /** Élément XSD de premier niveau, avec ses enfants résolus en objets (pas en noms). */
     static class ElementDef {
         String name;
         boolean complex;
@@ -13,7 +12,6 @@ public class XsdToJavaGenerator {
         List<Child> children = new ArrayList<>();
     }
 
-    /** Un enfant dans une xs:sequence : référence directe vers son ElementDef + cardinalité. */
     static class Child {
         ElementDef target;
         boolean unbounded;
@@ -104,7 +102,7 @@ public class XsdToJavaGenerator {
         return switch (local) {
             case "int", "integer", "long", "short" -> "Integer";
             case "boolean" -> "Boolean";
-            default -> "String"; // xs:string et tout type non géré volontairement (cf. limites du sujet)
+            default -> "String"; 
         };
     }
 

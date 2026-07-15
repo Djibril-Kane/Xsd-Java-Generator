@@ -7,9 +7,6 @@ public class ParserValidator {
         }
         String xsdPath = args[0];
 
-        // On appelle directement les méthodes de parsing de XsdToJavaGenerator,
-        // sans jamais appeler writeClass() : la génération de code n'est pas
-        // sollicitée ici, seul le parsing est testé.
         XsdToJavaGenerator.parse(xsdPath);
         XsdToJavaGenerator.resolveRoot();
 

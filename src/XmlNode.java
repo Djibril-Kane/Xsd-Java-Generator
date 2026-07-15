@@ -78,7 +78,7 @@ public abstract class XmlNode {
         sb.append(pad).append("</").append(tag).append(">").append(nl);
     }
 
-    /** Nom de la balise XML représentant cet objet (nom de classe en minuscules). */
+    /** Nom de la balise XML représentant cet objet */
     protected String tagName() {
         return getClass().getSimpleName().toLowerCase();
     }
