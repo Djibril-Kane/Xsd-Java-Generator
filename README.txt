@@ -48,3 +48,4 @@ DIFFÉRENCES AVEC LA V1
   pour désactiver l'indentation si besoin.
 - Règles de correspondance documentées dans un fichier séparé
   (docs/regles_correspondance.md), en plus du rapport.
+- Le projet est conçu pour être facilement extensible à de nouveaux types XSD.
